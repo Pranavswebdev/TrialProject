@@ -5,7 +5,21 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
   try {
-    const restaurants = await Restaurant.find();
+    const { cuisine, search } = req.query;
+    let query = {};
+
+    if (cuisine) {
+      query.cuisines = { $in: [cuisine] };
+    }
+
+    if (search) {
+      query.$or = [
+        { name: { $regex: search, $options: 'i' } },
+        { cuisines: { $regex: search, $options: 'i' } },
+      ];
+    }
+
+    const restaurants = await Restaurant.find(query);
     res.json(restaurants);
   } catch (error) {
     res.status(500).json({ message: error.message });

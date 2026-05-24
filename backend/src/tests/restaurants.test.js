@@ -102,6 +102,117 @@ describe('Restaurant Endpoints', () => {
       expect(res.body[0]).toHaveProperty('categories');
       expect(res.body[0].categories[0].items.length).toBe(1);
     });
+
+    it('should filter restaurants by cuisine', async () => {
+      const restaurants = [
+        {
+          name: 'Pizza Place',
+          cuisines: ['Italian', 'Pizza'],
+          isOpen: true,
+          categories: [
+            {
+              id: 'pizzas',
+              name: 'Pizzas',
+              items: [{ id: 'p1', name: 'Margherita', price: 299, isVeg: true, isAvailable: true }],
+            },
+          ],
+        },
+        {
+          name: 'Burger Barn',
+          cuisines: ['American', 'Burgers'],
+          isOpen: true,
+          categories: [
+            {
+              id: 'burgers',
+              name: 'Burgers',
+              items: [{ id: 'b1', name: 'Cheeseburger', price: 249, isVeg: false, isAvailable: true }],
+            },
+          ],
+        },
+      ];
+
+      await Restaurant.insertMany(restaurants);
+
+      const res = await request(app).get('/api/v1/restaurants?cuisine=Pizza');
+
+      expect(res.statusCode).toBe(200);
+      expect(res.body.length).toBe(1);
+      expect(res.body[0].name).toBe('Pizza Place');
+    });
+
+    it('should search restaurants by name (case-insensitive)', async () => {
+      const restaurants = [
+        {
+          name: 'Pizza Paradise',
+          cuisines: ['Italian'],
+          isOpen: true,
+          categories: [
+            {
+              id: 'pizzas',
+              name: 'Pizzas',
+              items: [{ id: 'p1', name: 'Margherita', price: 299, isVeg: true, isAvailable: true }],
+            },
+          ],
+        },
+        {
+          name: 'Burger Barn',
+          cuisines: ['American'],
+          isOpen: true,
+          categories: [
+            {
+              id: 'burgers',
+              name: 'Burgers',
+              items: [{ id: 'b1', name: 'Cheeseburger', price: 249, isVeg: false, isAvailable: true }],
+            },
+          ],
+        },
+      ];
+
+      await Restaurant.insertMany(restaurants);
+
+      const res = await request(app).get('/api/v1/restaurants?search=pizza');
+
+      expect(res.statusCode).toBe(200);
+      expect(res.body.length).toBe(1);
+      expect(res.body[0].name).toBe('Pizza Paradise');
+    });
+
+    it('should search restaurants by cuisine name', async () => {
+      const restaurants = [
+        {
+          name: 'Pizza Paradise',
+          cuisines: ['Italian'],
+          isOpen: true,
+          categories: [
+            {
+              id: 'pizzas',
+              name: 'Pizzas',
+              items: [{ id: 'p1', name: 'Margherita', price: 299, isVeg: true, isAvailable: true }],
+            },
+          ],
+        },
+        {
+          name: 'Burger Barn',
+          cuisines: ['American'],
+          isOpen: true,
+          categories: [
+            {
+              id: 'burgers',
+              name: 'Burgers',
+              items: [{ id: 'b1', name: 'Cheeseburger', price: 249, isVeg: false, isAvailable: true }],
+            },
+          ],
+        },
+      ];
+
+      await Restaurant.insertMany(restaurants);
+
+      const res = await request(app).get('/api/v1/restaurants?search=Italian');
+
+      expect(res.statusCode).toBe(200);
+      expect(res.body.length).toBe(1);
+      expect(res.body[0].name).toBe('Pizza Paradise');
+    });
   });
 
   describe('GET /api/v1/restaurants/:id', () => {
