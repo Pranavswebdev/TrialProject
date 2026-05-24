@@ -56,7 +56,7 @@ export default function OTPVerify() {
       await sendOtp(phone);
       setCanResend(false);
       setResendTimer(30);
-    } catch (err) {
+    } catch {
       setError('Failed to resend OTP');
     } finally {
       setLoading(false);

@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState } from 'react';
 
 export default function OTPInput({ onComplete }) {
   const [otp, setOtp] = useState(['', '', '', '', '', '']);
