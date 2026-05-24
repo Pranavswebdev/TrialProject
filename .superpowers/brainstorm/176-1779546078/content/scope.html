@@ -1,0 +1,41 @@
+<h2>What's the scope of this MVP?</h2>
+<p class="subtitle">A Swiggy-style app can serve multiple user types. Which panels are we building?</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Customer App Only</h3>
+      <p>Browse restaurants → Add to cart → Checkout → Track order. Single user-facing flow. Fastest to ship.</p>
+      <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
+        <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:20px;font-size:12px">Customer Portal</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Customer + Restaurant Admin</h3>
+      <p>Customer app + a separate restaurant dashboard for managing menus, accepting/rejecting orders, and viewing revenue.</p>
+      <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
+        <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:20px;font-size:12px">Customer Portal</span>
+        <span style="background:#fef3c7;color:#92400e;padding:3px 10px;border-radius:20px;font-size:12px">Restaurant Dashboard</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Full Platform</h3>
+      <p>Customer app + Restaurant admin + Delivery partner view + Super admin panel. Most complete but largest scope.</p>
+      <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
+        <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:20px;font-size:12px">Customer Portal</span>
+        <span style="background:#fef3c7;color:#92400e;padding:3px 10px;border-radius:20px;font-size:12px">Restaurant Dashboard</span>
+        <span style="background:#d1fae5;color:#065f46;padding:3px 10px;border-radius:20px;font-size:12px">Delivery Partner</span>
+        <span style="background:#dbeafe;color:#1e40af;padding:3px 10px;border-radius:20px;font-size:12px">Super Admin</span>
+      </div>
+    </div>
+  </div>
+</div>

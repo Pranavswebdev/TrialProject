@@ -1,0 +1,74 @@
+<h2>Pick a Color Palette</h2>
+<p class="subtitle">Four distinct directions — each shown on a mini home screen card. Click your favorite.</p>
+
+<div class="cards" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">
+
+  <!-- A: Deep Purple -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#1a0533;padding:16px">
+      <div style="background:#7C3AED;color:#fff;font-size:11px;padding:4px 10px;border-radius:20px;display:inline-block;margin-bottom:10px">● 4 restaurants near you</div>
+      <div style="background:#2d1052;border-radius:10px;padding:12px;margin-bottom:8px">
+        <div style="height:60px;background:linear-gradient(135deg,#7C3AED,#4C1D95);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:8px">🍔</div>
+        <div style="color:#fff;font-weight:700;font-size:13px">Burger Barn</div>
+        <div style="color:#a78bfa;font-size:11px">★ 4.5 · 25 min</div>
+      </div>
+      <div style="background:#7C3AED;color:#fff;text-align:center;padding:8px;border-radius:8px;font-weight:700;font-size:13px">View Cart · ₹349</div>
+    </div>
+    <div class="card-body">
+      <h3>Deep Purple</h3>
+      <p>Bold, premium, night-mode friendly. Accent: <strong style="color:#7C3AED">#7C3AED</strong> · Surface: <strong>#1a0533</strong> · Highlight: <strong style="color:#a78bfa">#a78bfa</strong></p>
+    </div>
+  </div>
+
+  <!-- B: Midnight Teal -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0f2027;padding:16px">
+      <div style="background:#0D9488;color:#fff;font-size:11px;padding:4px 10px;border-radius:20px;display:inline-block;margin-bottom:10px">● 4 restaurants near you</div>
+      <div style="background:#1a3540;border-radius:10px;padding:12px;margin-bottom:8px">
+        <div style="height:60px;background:linear-gradient(135deg,#0D9488,#065F46);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:8px">🍜</div>
+        <div style="color:#fff;font-weight:700;font-size:13px">Noodle House</div>
+        <div style="color:#5eead4;font-size:11px">★ 4.7 · 20 min</div>
+      </div>
+      <div style="background:#0D9488;color:#fff;text-align:center;padding:8px;border-radius:8px;font-weight:700;font-size:13px">View Cart · ₹349</div>
+    </div>
+    <div class="card-body">
+      <h3>Midnight Teal</h3>
+      <p>Fresh, clean, modern dark. Accent: <strong style="color:#0D9488">#0D9488</strong> · Surface: <strong>#0f2027</strong> · Highlight: <strong style="color:#5eead4">#5eead4</strong></p>
+    </div>
+  </div>
+
+  <!-- C: Crimson & Cream (light) -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#FFF8F5;padding:16px">
+      <div style="background:#BE123C;color:#fff;font-size:11px;padding:4px 10px;border-radius:20px;display:inline-block;margin-bottom:10px">● 4 restaurants near you</div>
+      <div style="background:#fff;border-radius:10px;padding:12px;margin-bottom:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08)">
+        <div style="height:60px;background:linear-gradient(135deg,#BE123C,#9F1239);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:8px">🍕</div>
+        <div style="color:#1c1917;font-weight:700;font-size:13px">Pizza Palace</div>
+        <div style="color:#78716c;font-size:11px">★ 4.3 · 30 min</div>
+      </div>
+      <div style="background:#BE123C;color:#fff;text-align:center;padding:8px;border-radius:8px;font-weight:700;font-size:13px">View Cart · ₹349</div>
+    </div>
+    <div class="card-body">
+      <h3>Crimson & Cream</h3>
+      <p>Rich red on light background. Accent: <strong style="color:#BE123C">#BE123C</strong> · Surface: <strong>#FFF8F5</strong> · Clean & readable.</p>
+    </div>
+  </div>
+
+  <!-- D: Electric Indigo (light) -->
+  <div class="card" data-choice="d" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#F5F3FF;padding:16px">
+      <div style="background:#4F46E5;color:#fff;font-size:11px;padding:4px 10px;border-radius:20px;display:inline-block;margin-bottom:10px">● 4 restaurants near you</div>
+      <div style="background:#fff;border-radius:10px;padding:12px;margin-bottom:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08)">
+        <div style="height:60px;background:linear-gradient(135deg,#4F46E5,#7C3AED);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:8px">🥗</div>
+        <div style="color:#1e1b4b;font-weight:700;font-size:13px">Green Bowl</div>
+        <div style="color:#6366f1;font-size:11px">★ 4.8 · 18 min</div>
+      </div>
+      <div style="background:#4F46E5;color:#fff;text-align:center;padding:8px;border-radius:8px;font-weight:700;font-size:13px">View Cart · ₹349</div>
+    </div>
+    <div class="card-body">
+      <h3>Electric Indigo</h3>
+      <p>Vibrant indigo on lavender white. Accent: <strong style="color:#4F46E5">#4F46E5</strong> · Surface: <strong>#F5F3FF</strong> · Modern & energetic.</p>
+    </div>
+  </div>
+
+</div>

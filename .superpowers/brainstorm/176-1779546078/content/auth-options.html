@@ -1,0 +1,66 @@
+<h2>How do users log in?</h2>
+<p class="subtitle">Authentication shapes the first screen. Pick the method that fits best.</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Phone OTP — Swiggy style</h3>
+      <p>Enter mobile number → receive 6-digit OTP → logged in. Most authentic to Swiggy. No passwords to manage.</p>
+      <div class="mockup" style="margin-top:12px;max-width:260px">
+        <div class="mockup-header">Login Screen Preview</div>
+        <div class="mockup-body" style="background:#fff;padding:16px;border-radius:8px;font-size:13px">
+          <div style="text-align:center;margin-bottom:12px">
+            <div style="font-size:22px;font-weight:700;color:#FF5722">🍔 FoodRush</div>
+            <div style="color:#888;font-size:11px">India's fastest food delivery</div>
+          </div>
+          <div style="border:1px solid #ddd;border-radius:6px;padding:8px;display:flex;gap:6px;margin-bottom:8px">
+            <span style="color:#888">+91</span>
+            <span style="color:#ccc">│</span>
+            <span style="color:#aaa">Enter mobile number</span>
+          </div>
+          <div style="background:#FF5722;color:#fff;text-align:center;padding:8px;border-radius:6px;font-weight:600">Get OTP</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Email + Password</h3>
+      <p>Standard email/password signup and login with JWT tokens. Simpler to implement, no SMS provider needed.</p>
+      <div class="mockup" style="margin-top:12px;max-width:260px">
+        <div class="mockup-header">Login Screen Preview</div>
+        <div class="mockup-body" style="background:#fff;padding:16px;border-radius:8px;font-size:13px">
+          <div style="text-align:center;margin-bottom:12px">
+            <div style="font-size:22px;font-weight:700;color:#FF5722">🍔 FoodRush</div>
+          </div>
+          <div style="border:1px solid #ddd;border-radius:6px;padding:8px;margin-bottom:8px;color:#aaa">Email address</div>
+          <div style="border:1px solid #ddd;border-radius:6px;padding:8px;margin-bottom:8px;color:#aaa">Password</div>
+          <div style="background:#FF5722;color:#fff;text-align:center;padding:8px;border-radius:6px;font-weight:600">Sign In</div>
+          <div style="text-align:center;margin-top:8px;color:#888;font-size:11px">Don't have an account? <span style="color:#FF5722">Sign up</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Google OAuth</h3>
+      <p>One-click sign in with Google. No passwords, no OTP. Requires Google Cloud Console setup.</p>
+      <div class="mockup" style="margin-top:12px;max-width:260px">
+        <div class="mockup-header">Login Screen Preview</div>
+        <div class="mockup-body" style="background:#fff;padding:16px;border-radius:8px;font-size:13px">
+          <div style="text-align:center;margin-bottom:16px">
+            <div style="font-size:22px;font-weight:700;color:#FF5722">🍔 FoodRush</div>
+          </div>
+          <div style="border:1px solid #ddd;border-radius:6px;padding:8px;display:flex;align-items:center;gap:8px;justify-content:center">
+            <span>G</span><span style="font-weight:500">Continue with Google</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

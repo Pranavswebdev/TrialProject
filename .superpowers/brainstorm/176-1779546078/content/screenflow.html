@@ -1,0 +1,86 @@
+<h2>Screen Flow — Customer App</h2>
+<p class="subtitle">All screens and how they connect. Does this cover what you need?</p>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px;margin-top:8px">
+
+  <!-- Auth Flow -->
+  <div style="grid-column:1/-1;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#999;margin-bottom:-8px">Auth Flow</div>
+
+  <div style="background:#fff3f0;border:2px solid #FF5722;border-radius:10px;padding:14px">
+    <div style="font-weight:700;color:#FF5722;margin-bottom:4px">① Splash</div>
+    <div style="font-size:12px;color:#666">Logo + tagline, 2s auto-redirect</div>
+    <div style="margin-top:8px;font-size:11px;color:#aaa">→ Login</div>
+  </div>
+
+  <div style="background:#fff3f0;border:2px solid #FF5722;border-radius:10px;padding:14px">
+    <div style="font-weight:700;color:#FF5722;margin-bottom:4px">② Phone Login</div>
+    <div style="font-size:12px;color:#666">+91 phone number entry, "Get OTP" button</div>
+    <div style="margin-top:8px;font-size:11px;color:#aaa">→ OTP Verify</div>
+  </div>
+
+  <div style="background:#fff3f0;border:2px solid #FF5722;border-radius:10px;padding:14px">
+    <div style="font-weight:700;color:#FF5722;margin-bottom:4px">③ OTP Verify</div>
+    <div style="font-size:12px;color:#666">6-digit OTP input, resend timer, auto-submit</div>
+    <div style="margin-top:8px;font-size:11px;color:#aaa">→ Home</div>
+  </div>
+
+  <!-- Main Flow -->
+  <div style="grid-column:1/-1;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#999;margin-bottom:-8px;margin-top:8px">Main App Flow</div>
+
+  <div style="background:#e8f5e9;border:2px solid #4CAF50;border-radius:10px;padding:14px">
+    <div style="font-weight:700;color:#2e7d32;margin-bottom:4px">④ Home</div>
+    <div style="font-size:12px;color:#666">Location bar, search, cuisine filter chips, restaurant cards grid</div>
+    <div style="margin-top:8px;font-size:11px;color:#aaa">→ Restaurant Detail</div>
+  </div>
+
+  <div style="background:#e8f5e9;border:2px solid #4CAF50;border-radius:10px;padding:14px">
+    <div style="font-weight:700;color:#2e7d32;margin-bottom:4px">⑤ Restaurant Detail</div>
+    <div style="font-size:12px;color:#666">Banner, info, sticky category tabs, menu items with add/remove</div>
+    <div style="margin-top:8px;font-size:11px;color:#aaa">→ Cart (floating)</div>
+  </div>
+
+  <div style="background:#e8f5e9;border:2px solid #4CAF50;border-radius:10px;padding:14px">
+    <div style="font-weight:700;color:#2e7d32;margin-bottom:4px">⑥ Cart</div>
+    <div style="font-size:12px;color:#666">Item list, qty controls, subtotal + delivery fee, Proceed to Checkout</div>
+    <div style="margin-top:8px;font-size:11px;color:#aaa">→ Checkout</div>
+  </div>
+
+  <div style="background:#e8f5e9;border:2px solid #4CAF50;border-radius:10px;padding:14px">
+    <div style="font-weight:700;color:#2e7d32;margin-bottom:4px">⑦ Checkout</div>
+    <div style="font-size:12px;color:#666">Delivery address, order summary, mock payment, Place Order</div>
+    <div style="margin-top:8px;font-size:11px;color:#aaa">→ Order Placed</div>
+  </div>
+
+  <!-- Post-Order -->
+  <div style="grid-column:1/-1;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#999;margin-bottom:-8px;margin-top:8px">Post-Order</div>
+
+  <div style="background:#e3f2fd;border:2px solid #2196F3;border-radius:10px;padding:14px">
+    <div style="font-weight:700;color:#1565c0;margin-bottom:4px">⑧ Order Confirmed</div>
+    <div style="font-size:12px;color:#666">Success animation, order number, "Track Order" CTA</div>
+    <div style="margin-top:8px;font-size:11px;color:#aaa">→ Order Tracking</div>
+  </div>
+
+  <div style="background:#e3f2fd;border:2px solid #2196F3;border-radius:10px;padding:14px">
+    <div style="font-weight:700;color:#1565c0;margin-bottom:4px">⑨ Order Tracking</div>
+    <div style="font-size:12px;color:#666">5-step progress bar, auto-advances on timer, ETA countdown</div>
+    <div style="margin-top:8px;font-size:11px;color:#aaa">→ Home (after delivery)</div>
+  </div>
+
+  <!-- Account -->
+  <div style="grid-column:1/-1;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#999;margin-bottom:-8px;margin-top:8px">Account (Bottom Nav)</div>
+
+  <div style="background:#fce4ec;border:2px solid #e91e63;border-radius:10px;padding:14px">
+    <div style="font-weight:700;color:#880e4f;margin-bottom:4px">⑩ Order History</div>
+    <div style="font-size:12px;color:#666">Past orders list with restaurant name, date, total, status badge</div>
+  </div>
+
+  <div style="background:#fce4ec;border:2px solid #e91e63;border-radius:10px;padding:14px">
+    <div style="font-weight:700;color:#880e4f;margin-bottom:4px">⑪ Profile</div>
+    <div style="font-size:12px;color:#666">Name, phone, saved addresses, logout button</div>
+  </div>
+
+</div>
+
+<div style="margin-top:20px;background:#fffbf0;border:1px solid #f59e0b;border-radius:8px;padding:12px;font-size:13px">
+  <strong>Bottom Nav tabs:</strong> Home · Orders · Profile &nbsp;|&nbsp; <strong>Cart:</strong> floating sticky bar on restaurant & cart pages
+</div>
