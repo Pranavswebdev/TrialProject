@@ -3,6 +3,7 @@ import Splash from './pages/Splash';
 import Login from './pages/Login';
 import OTPVerify from './pages/OTPVerify';
 import Home from './pages/Home';
+import Restaurant from './pages/Restaurant';
 import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
@@ -17,6 +18,14 @@ function App() {
           element={
             <ProtectedRoute>
               <Home />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/restaurant/:id"
+          element={
+            <ProtectedRoute>
+              <Restaurant />
             </ProtectedRoute>
           }
         />
